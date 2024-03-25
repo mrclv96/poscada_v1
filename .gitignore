@@ -1,0 +1,13 @@
+# Files and paths to exclude tracking from all child paths
+**/.mono
+**/.DS_Store
+**/*.log
+
+# Files and paths to exclude tracking from ScadaVue
+**/node_modules
+**/dist
+
+# Files and paths to exclude tracking from SCADA_A
+**/bin
+**/obj
+**/*.sln

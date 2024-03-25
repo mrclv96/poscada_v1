@@ -1,0 +1,49 @@
+﻿@model SCADA_A.Entidades.OnePieceFlow.KitComponentes
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>KitComponentes</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CUSTOMPN)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CUSTOMPN)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TYPE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TYPE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.POSITION)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.POSITION)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.COLOR)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.COLOR)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.kit)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.kit.Nombre)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.idKitComponentes">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

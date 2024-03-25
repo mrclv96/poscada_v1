@@ -1,0 +1,19 @@
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
+namespace SCADA_A.Entidades.Estaciones
+{
+    public class Linea
+    {
+        [Key]
+        [Required]
+        public int idLinea { get; set; }
+        [Required]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "El nombre de la línea debe ser de 3 a 50 caracteres")]
+        public string Nombre { get; set; }
+        [Range(0, 10, ErrorMessage = "El número de posiciones debe ser entre 0 a 10")]
+        public int NoPosiciones { get; set; }
+        [Required]
+        public bool Estatus { get; set; }
+    }
+}

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<SCADA_A.Entidades.OnePieceFlow.Kit>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.linea)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.linea.Nombre)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.idKit">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.idKit">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.idKit">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
