@@ -6,6 +6,7 @@
 # Files and paths to exclude tracking from ScadaVue
 **/node_modules
 **/dist
+ScadaVue/scada/src/main.js
 
 # Files and paths to exclude tracking from SCADA_A
 **/bin
